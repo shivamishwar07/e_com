@@ -1,0 +1,26 @@
+.seller-home-data{
+    display: flex;
+    justify-content: center;
+}
+table{
+    text-align: center;
+    color: blueviolet;
+    padding: 10px;
+    border-collapse: collapse;
+    
+}
+table td,table th{
+    border: .5px solid blueviolet;
+    padding: 10px;
+    min-height: 160px;
+}
+img{
+    height:100px;
+    width: 100px;
+}
+.delete-btn{
+    cursor: pointer;
+}
+.adjust-update{
+    margin-left: 10px;
+}

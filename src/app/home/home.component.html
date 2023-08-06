@@ -1,0 +1,15 @@
+<ngb-carousel *ngIf="popularImage">
+  <ng-template ngbSlide *ngFor="let item of popularImage">
+    <div class="picsum-img-wrapper">
+      <img
+        class="product-header-img"
+        src="{{ item.image }}"
+        alt="Random first slide"
+      />
+    </div>
+    <div class="carousel-caption">
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.desc }}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

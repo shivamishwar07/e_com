@@ -1,0 +1,57 @@
+body{
+    font-family: sans-serif;
+}
+.container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.common-form{
+        text-align: center;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        width: 300px;
+}
+.form-input{
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 1px solid blueviolet;
+    color: blueviolet;
+}
+.form-input-text{
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 1px solid blueviolet;
+    color: blueviolet;
+    align-items: center;
+}
+.form-button{
+    height: 35px;
+    border: 1px solid blueviolet;
+    cursor: pointer;
+}
+.error-p{
+    color: red;
+    font-weight: bold;
+}
+.message-p{
+    color:green;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    color: blueviolet;
+    text-align: center;
+}
+.carousel-caption{
+    background-color: rgb(101, 100, 100);
+    border-radius: 5px;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon{
+background-color: black;
+border: 5px;
+border-radius: 5px;
+}

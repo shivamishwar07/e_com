@@ -1,0 +1,48 @@
+{
+  "seller": [
+    {
+      "name": "Shivam Ishwar",
+      "email": "shivam@gmail.com",
+      "password": "1234",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "name": "I phone 11 pro max",
+      "price": "42000",
+      "color": "White",
+      "desc": "The Apple Product",
+      "category": "Mobile",
+      "image": "https://static.esrgear.com/blog/wp-content/uploads/2020/05/iPhone-11.jpg",
+      "id": 2
+    },
+    {
+      "name": "I phone 12",
+      "price": "48000",
+      "color": "White",
+      "desc": "The Apple Product",
+      "category": "Mobile",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-finish-select-202207-white?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1662150115751",
+      "id": 3
+    },
+    {
+      "name": "I phone 13",
+      "price": "55000",
+      "color": "White",
+      "desc": "The Apple Product",
+      "category": "Mobile",
+      "image": "https://images.macrumors.com/article-new/2020/10/iphone-13-color-lineup.jpg",
+      "id": 4
+    },
+    {
+      "name": "I phone 14",
+      "price": "75000",
+      "color": "White",
+      "desc": "The Apple Product",
+      "category": "Mobile",
+      "image": "https://gumlet.assettype.com/swarajya/2021-09/a2e6bdcc-276d-4cb6-98c7-e9bc2dac6b0c/iPone_13_pro_max.png",
+      "id": 5
+    }
+  ]
+}
