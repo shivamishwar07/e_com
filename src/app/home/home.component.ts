@@ -9,11 +9,15 @@ import { ProductService } from '../services/product.service';
 })
 export class HomeComponent {
   popularImage:undefined|product[]
+  trandyProducts:undefined|product[]
   constructor(private product:ProductService){}
   ngOnInit(){
     this.product.popularProducts().subscribe((data)=>{
       console.log(data);
       this.popularImage=data
+    })
+    this.product.trandyProducts().subscribe((data)=>{
+      this.trandyProducts=data;
     })
   }
 }
