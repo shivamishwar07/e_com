@@ -1,7 +1,10 @@
+
+
 body{
     font-family: sans-serif;
+    border: 0;
 }
-.container{
+.container1{
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -35,6 +38,7 @@ body{
 .error-p{
     color: red;
     font-weight: bold;
+    text-align: center;
 }
 .message-p{
     color:green;
@@ -51,4 +55,12 @@ body{
 background-color: black;
 border: 5px;
 border-radius: 5px;
+}
+.invalid-input{
+    color: red;
+    font-weight: bold;
+    margin-top: -20px;
+}
+button:disabled{
+cursor: not-allowed;
 }

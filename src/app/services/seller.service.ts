@@ -29,9 +29,7 @@ export class SellerService {
         }
         else {
           this.isLoginError.emit(true)
-          console.log("Authentication failled")
         }
-        console.log(result)
       })
   }
   reloadSeller() {

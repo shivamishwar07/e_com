@@ -13,7 +13,6 @@ export class HomeComponent {
   constructor(private product:ProductService){}
   ngOnInit(){
     this.product.popularProducts().subscribe((data)=>{
-      console.log(data);
       this.popularImage=data
     })
     this.product.trandyProducts().subscribe((data)=>{

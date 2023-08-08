@@ -1,9 +1,24 @@
 <div class="user-auth">
-    <h1>User Sign-Up </h1>
-    <form #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)" class="common-form" >
-        <input type="text" placeholder="Enter Name" name="name" ngModel class="form-input">
-        <input type="email" placeholder="Enter Email" name="email" ngModel class="form-input">
-        <input type="password" placeholder="Enter Password" name="password" ngModel class="form-input">
-        <button class="form-button">signUp</button>
-    </form>
+    <div *ngIf="showLogin" class="user-login">
+        <h1>User Login </h1>
+        <p class="error-p"> {{authError}} </p>
+        <form #userLogin="ngForm" (ngSubmit)="Login(userLogin.value)" class="common-form">
+            <input #email="ngModel" type="email" email required placeholder="Enter Email" name="email" ngModel class="form-input"/>
+            <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Enter Your Email Correctly</span></p>
+            <input minlength="2" maxlength="16" #password="ngModel" type="password" placeholder="Enter Password" name="password" ngModel class="form-input" required/>
+            <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Enter Your password Correctly</span></p>
+            <button [disabled]="userLogin.invalid" class="form-button">Login</button>
+            <p>Already Have An Account?<a class="auth-toggle-link"  (click)="openLogin()">Click to Login</a></p>
+        </form>
+    </div>
+    <div *ngIf="!showLogin" class="user-signup">
+        <h1>User Sign-Up </h1>
+        <form #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)" class="common-form">
+            <input type="text" placeholder="Enter Name" name="name" ngModel class="form-input">
+            <input type="email" placeholder="Enter Email" name="email" ngModel class="form-input">
+            <input type="password" placeholder="Enter Password" name="password" ngModel class="form-input">
+            <button class="form-button">signUp</button>
+            <p>Don't Have Account?<a class="auth-toggle-link" (click)="openSignup()">Click to Sign-Up</a></p>
+        </form>
+    </div>
 </div>

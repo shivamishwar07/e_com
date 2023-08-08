@@ -10,9 +10,8 @@ export class SellerAddProductComponent {
   addProductMessage:string|undefined
   constructor(private procuct:ProductService ){}
  submit(data:product){
-  console.log(data)
+  if(data.category && data.color && data.desc && data.image && data.name && data.price){
   this.procuct.addProduct(data).subscribe((result)=>{
-    console.warn(result);
     if(result){
       this.addProductMessage="Sucessfull"
     }
@@ -23,5 +22,9 @@ export class SellerAddProductComponent {
     setTimeout(()=>
       (this.addProductMessage=undefined),1000)
   });
+}
+else{
+  alert("Check Input Field")
+}
  }
 }

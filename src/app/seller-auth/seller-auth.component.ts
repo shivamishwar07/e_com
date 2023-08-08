@@ -9,7 +9,7 @@ import { Signup } from '../data-type';
 })
 export class SellerAuthComponent {
   showLogin = true
-  authError: string = ''
+  authError:undefined| string = ''
   constructor(private seller: SellerService, private router: Router) { }
   ngOnInit(): void {
     this.seller.reloadSeller()
@@ -34,5 +34,7 @@ export class SellerAuthComponent {
         this.authError = "Login Faild Check Email or Password"
       }
     })
+    setTimeout(()=>
+  (this.authError=undefined),1000)
   }
 }
