@@ -8,11 +8,25 @@ export interface Login{
     password:string
 }
 export interface product{
+    productId: any
     name:string,
     price:number,
     color:string,
     desc:string,
     category:string,
     image:string,
-    id:number
+    id:number,
+    quantity:undefined|number
+}
+export interface cart{
+    name:string,
+    price:number,
+    color:string,
+    desc:string,
+    category:string,
+    image:string,
+    id:number |undefined,
+    userId:number,
+    productId:undefined|number,
+    quantity:undefined|number
 }

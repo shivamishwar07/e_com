@@ -8,6 +8,8 @@ import { product } from '../data-type';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  cartItems:number=0
+
   redirectToDetals(arg0: number) {
     throw new Error('Method not implemented.');
   }
@@ -36,9 +38,14 @@ export class HeaderComponent {
           else {
             this.menuType = "default"
           }
-        
       }
-    })
+    });
+    let cartData=localStorage.getItem('localCart');
+      if(cartData)
+      this.cartItems=JSON.parse(cartData).length;
+      this.product.cartData.subscribe((item)=>{
+        this.cartItems=item.length;
+      })
   }
   logout() {
     localStorage.removeItem('seller');
@@ -47,6 +54,7 @@ export class HeaderComponent {
   userLogout(){
     localStorage.removeItem('user');
     this.route.navigate(['/user-auth']);
+    this.product.cartData.emit([]);
   }
   searchProducts(query: KeyboardEvent) {
     if (query) {
@@ -56,6 +64,7 @@ export class HeaderComponent {
           data.length = 5
         this.searchResult = data;
       })
+      
     }
   }
   searchBlur() {
